@@ -4,7 +4,7 @@
 [![license:mit](https://img.shields.io/badge/license-mit-blue.svg)](https://opensource.org/licenses/MIT)
 
 # json-input-stream
-`json-input-stream` transforms the incoming data inside a JSON object.
+`json-input-stream` transforms the incoming data into a JSON object.
 
 I made this because I always use JSON objects as response from my API, and using `fs.createReadStream` with a pipeline to the response would send the inside of the file, without the pretty looking JSON response. This way I still have the JSON responses, and don't run out of memory if using `fs.readFileSync` on huge files and creating the JSON response with the returned data from `fs.readFileSync`.
 
