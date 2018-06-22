@@ -1,6 +1,6 @@
 {
   "name": "json-input-stream",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "json-input-stream transforms the incoming data inside a JSON object.",
   "main": "index.js",
   "homepage": "https://github.com/Heartz66/json-input-stream",

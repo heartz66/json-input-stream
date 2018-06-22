@@ -25,7 +25,9 @@ function JsonInputStream(data) {
 util.inherits(JsonInputStream, stream.Transform);
 
 JsonInputStream.prototype._transform = function (row, enc, callback) {
-    let data = JSON.stringify(row, null).slice(1, data.length - 1);
+    let data = JSON.stringify(row, null);
+
+    data = data.slice(1, data.length - 1);
 
     this.push(data);
 
