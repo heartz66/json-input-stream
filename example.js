@@ -9,4 +9,3 @@ fs.createReadStream('./content-file.txt', 'utf8')
         }
     }))
     .pipe(fs.createWriteStream('./json-file.json'));
-
