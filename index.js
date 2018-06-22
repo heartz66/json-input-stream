@@ -15,7 +15,7 @@ function JsonInputStream(data) {
     let stringObject = JSON.stringify(data);
 
     if (stringObject.indexOf(SPLIT_LOCATION) === -1) {
-        throw new Error('No output location has been set in given object.');
+        throw new Error('No output location has been found in given object.');
     }
 
     this.objectParts = stringObject.split(SPLIT_LOCATION);
