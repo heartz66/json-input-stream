@@ -3,7 +3,6 @@ let stream = require('stream');
 let util = require('util');
 
 let OUTPUT_LOCATION = uuid.v4();
-let SPLIT_LOCATION = '"' + OUTPUT_LOCATION + '"';
 
 function JsonInputStream(data) {
     stream.Transform.call(this, {objectMode: true});
@@ -14,11 +13,11 @@ function JsonInputStream(data) {
 
     let stringObject = JSON.stringify(data);
 
-    if (stringObject.indexOf(SPLIT_LOCATION) === -1) {
+    if (stringObject.indexOf(OUTPUT_LOCATION) === -1) {
         throw new Error('No output location has been found in given object.');
     }
 
-    this.objectParts = stringObject.split(SPLIT_LOCATION);
+    this.objectParts = stringObject.split(OUTPUT_LOCATION);
 
     this.push(this.objectParts[0]);
 }
@@ -26,7 +25,11 @@ function JsonInputStream(data) {
 util.inherits(JsonInputStream, stream.Transform);
 
 JsonInputStream.prototype._transform = function (row, enc, callback) {
-    this.push(JSON.stringify(row, null));
+    let data = JSON.stringify(row, null);
+
+    data = data.slice(1, data.length - 1);
+
+    this.push(data);
 
     callback();
 };
