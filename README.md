@@ -1,6 +1,6 @@
 [![npm version](https://img.shields.io/npm/v/json-input-stream.svg)](https://npmjs.com/package/json-input-stream)
 [![npm downloads](https://img.shields.io/npm/dm/json-input-stream.svg)](https://npmjs.com/package/json-input-stream)
-[![dependencies Status](https://david-dm.org/Heartz66/json-input-stream/status.svg)](https://david-dm.org/svanlangen/json-input-stream)
+[![dependencies Status](https://david-dm.org/Heartz66/json-input-stream/status.svg)](https://david-dm.org/Heartz66/json-input-stream)
 [![license:mit](https://img.shields.io/badge/license-mit-blue.svg)](https://opensource.org/licenses/MIT)
 
 # json-input-stream
